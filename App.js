@@ -125,16 +125,8 @@ export default function App() {
   };
 
   const deleteTodo = (id) => {
-    Alert.alert('Delete Todo', 'Are you sure you want to delete this todo?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Delete',
-        style: 'destructive',
-        onPress: () => {
-          setTodos(todos.filter((todo) => todo.id !== id));
-        },
-      },
-    ]);
+    setTodos(todos.filter((todo) => todo.id !== id));
+    alert("Task deleted successfully")
   };
 
   const openEditModal = (todo) => {
